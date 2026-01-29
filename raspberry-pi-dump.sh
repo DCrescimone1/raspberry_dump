@@ -12,8 +12,11 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-# Base dump directory (overwrites each time)
-DUMP_DIR="$HOME/raspberry-pi-dump"
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Base dump directory (overwrites each time) - in same folder as script
+DUMP_DIR="$SCRIPT_DIR/raspberry-pi-dump"
 
 echo -e "${GREEN}================================${NC}"
 echo -e "${GREEN}Raspberry Pi System Dump${NC}"
